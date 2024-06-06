@@ -1,0 +1,216 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	font-family: Poppins, sans-serif;
+}
+
+h2 {
+	color: #000;
+	font-family: Poppins;
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-transform: uppercase;
+}
+
+p,
+li {
+	color: #000;
+	font-family: Poppins;
+	font-size: 1.5rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+nav {
+	padding: 2rem 0 2rem 0;
+	margin-bottom: 5rem;
+	display: flex;
+	justify-content: space-around;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	-webkit-text-stroke: #ee0909;
+}
+
+.nav-right {
+	display: flex;
+	gap: 6rem;
+}
+
+nav a {
+	margin-top: 0.8rem;
+	font-size: 23px;
+	color: inherit;
+	text-underline-offset: 10px;
+	text-decoration-thickness: 3px;
+}
+
+nav a {
+	position: relative;
+	text-decoration: none;
+	color: black;
+}
+
+nav a::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: black;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+nav a:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+.logo-navbar li {
+	font-size: 35px;
+	font-weight: 1000;
+}
+
+#hero-container {
+	display: flex;
+	justify-content: space-evenly;
+  gap: 5rem;
+}
+
+.about-me{
+  flex-basis: 1;
+  padding: 0 0 0 22.5rem;
+}
+
+.profile-img {
+	align-items: center;
+  padding-right: 22.5rem;
+  flex-basis: 1;
+}
+
+.profile-img img{
+  width: 100%;
+  object-fit: cover;
+}
+
+.profile-img h2 {
+	padding: 2rem 0 0 0;
+
+}
+
+#arts {
+	display: flex;
+	justify-content: center;
+	padding: 16rem;
+	gap: 0.5rem; /* Add gap between cards */
+  flex-wrap: wrap;
+}
+
+.pic-cards {
+	flex: 1 calc(25%); /* Ensure all cards have the same initial flex value */
+	overflow: hidden; /* Hide any overflow when image scales */
+  transition: all 0.3s ease;
+}
+
+.pic-cards img {
+	width: 100%;
+	height: 300px; /* Maintain aspect ratio */
+	transition: transform 0.3s ease;
+  object-fit: cover;
+  box-shadow: 0 8px 16px #aaa4a4(75, 69, 69, 0.377);
+}
+
+.pic-cards:hover {
+	flex-grow: 2; /* Grow to twice the size */
+  box-shadow: 0 8px 16px #837c7c;
+}
+
+.pic-cards:hover img {
+	transform: scale(1.01); /* Slightly scale the image for a nice effect */
+}
+
+#social-media {
+  position: fixed; /* Change to fixed for it to stick */
+  top: 50%; /* Stick to the middle of the viewport */
+  transform: translateY(-50%);
+  right: 0; /* Position to the right side */
+  width: 70px; /* Adjust width as needed */
+  background-color: #c9c3c3; /* Gray background */
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-icons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  gap: 1rem ;
+}
+
+.social-icons img {
+	margin-bottom: 0.5rem; /* Add some space between icons */
+	width: 30px; /* Adjust icon size */
+}
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	background: #fff;
+	box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25);
+	padding: 1rem 3rem 1rem 3rem;
+	align-items: center;
+}
+
+.footer-right {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.footer-right img {
+	width: 30px;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 60px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.8); 
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
